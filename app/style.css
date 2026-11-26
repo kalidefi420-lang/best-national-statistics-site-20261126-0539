@@ -1,0 +1,123 @@
+/* Portugal in Figures — original design.
+   Deep pine green + warm ochre on paper white; system fonts only. */
+:root {
+  --pine: #0f5e63;
+  --pine-dark: #0a4347;
+  --ink: #14332f;
+  --muted: #5a6b68;
+  --paper: #f7f5ef;
+  --card: #ffffff;
+  --line: #e3e8e6;
+  --ochre: #d98e1f;
+  --rust: #a44a3f;
+  --blue: #3a7ca5;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+a { color: var(--pine); }
+.site-header { background: var(--pine-dark); color: #fff; }
+.header-inner {
+  max-width: 1080px; margin: 0 auto; padding: 14px 20px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px;
+}
+.brand { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+.brand-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border-radius: 8px;
+  background: var(--ochre); color: var(--pine-dark);
+  font-weight: 800; font-size: 18px; letter-spacing: 1px;
+}
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-text strong { font-size: 19px; }
+.brand-text span:last-child { font-size: 12px; opacity: 0.85; letter-spacing: 0.4px; }
+nav { display: flex; flex-wrap: wrap; gap: 4px; margin-left: auto; }
+nav a {
+  color: #d7e6e2; text-decoration: none; font-size: 14px;
+  padding: 7px 11px; border-radius: 6px;
+}
+nav a:hover { background: rgba(255, 255, 255, 0.12); color: #fff; }
+nav a.active { background: var(--ochre); color: var(--pine-dark); font-weight: 700; }
+.page { max-width: 1080px; margin: 0 auto; padding: 28px 20px 40px; }
+.hero h1, .panel h1 { font-size: 34px; margin: 0 0 8px; letter-spacing: -0.5px; }
+.panel h2 { font-size: 22px; margin: 0 0 10px; }
+.panel h3 { font-size: 16px; margin: 0 0 8px; }
+.lede { font-size: 18px; color: #2c4a46; max-width: 760px; }
+.updated { font-size: 13px; color: var(--muted); }
+.panel {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 22px 24px; margin: 20px 0;
+}
+.card-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;
+}
+.stat-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 18px 20px; border-top: 4px solid var(--pine);
+}
+.stat-card h3 { margin: 0 0 4px; font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; }
+.stat-card .big { font-size: 32px; font-weight: 800; margin: 2px 0; color: var(--pine-dark); }
+.stat-card .detail { margin: 0; font-size: 14px; }
+.stat-card .change { margin: 6px 0 0; font-size: 13px; font-weight: 700; color: var(--pine); }
+.source { font-size: 12.5px; color: var(--muted); margin: 10px 0 0; }
+.note { font-size: 14px; color: #2c4a46; }
+.link-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+.link-cards a {
+  display: block; border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px;
+  text-decoration: none; background: var(--paper);
+}
+.link-cards a:hover { border-color: var(--pine); }
+.link-cards strong { display: block; font-size: 17px; color: var(--pine-dark); }
+.link-cards span { font-size: 14px; color: var(--muted); }
+.data-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.data-table th, .data-table td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.data-table thead th { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+.data-table tbody tr:hover { background: #f2f6f4; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+.key-list { list-style: none; margin: 0; padding: 0; }
+.key-list li {
+  display: flex; justify-content: space-between; gap: 16px;
+  padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px;
+}
+.share-bars { display: flex; flex-direction: column; gap: 12px; margin: 14px 0; }
+.share-row { display: grid; grid-template-columns: 150px 1fr 60px; gap: 12px; align-items: center; font-size: 14px; }
+.share-track { height: 18px; background: #eef2f0; border-radius: 9px; overflow: hidden; }
+.share-fill { height: 100%; border-radius: 9px; }
+.share-value { font-weight: 700; text-align: right; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 12px 0; font-size: 14px; }
+.controls label { font-weight: 700; }
+.controls input[type="search"], .controls select {
+  font: inherit; padding: 8px 10px; border: 1px solid #c9d4d0; border-radius: 8px; background: #fff; color: var(--ink);
+}
+.controls input[type="search"] { min-width: 240px; }
+.year-btn {
+  font: inherit; font-size: 13px; padding: 6px 10px; margin: 2px;
+  border: 1px solid #c9d4d0; border-radius: 999px; background: #fff; color: var(--ink); cursor: pointer;
+}
+.year-btn:hover { border-color: var(--pine); }
+.year-btn.selected { background: var(--ochre); border-color: var(--ochre); color: var(--pine-dark); font-weight: 700; }
+.trade-figures { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 12px 0 20px; }
+.trade-figures div { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.trade-figures span { display: block; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.trade-figures strong { font-size: 24px; color: var(--pine-dark); }
+.region-result { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; margin-top: 8px; }
+.region-line { margin: 6px 0; font-size: 15px; }
+svg { max-width: 100%; height: auto; display: block; }
+.site-footer { background: var(--pine-dark); color: #cfe0dc; }
+.footer-inner { max-width: 1080px; margin: 0 auto; padding: 26px 20px; font-size: 13.5px; }
+.footer-inner a { color: #ffd9a0; }
+@media (max-width: 720px) {
+  .hero h1, .panel h1 { font-size: 27px; }
+  .page { padding: 20px 14px 32px; }
+  .panel { padding: 18px 16px; }
+  .two-col { grid-template-columns: 1fr; }
+  .share-row { grid-template-columns: 110px 1fr 52px; }
+  .trade-figures { grid-template-columns: 1fr; }
+  nav { margin-left: 0; }
+  .stat-card .big { font-size: 27px; }
+}
